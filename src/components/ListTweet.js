@@ -16,7 +16,7 @@ export const ListTweet = ({ tweets, handleDelete }) => {
                 ?
                     tweets.map( tweet => (
                         
-                        <div key={ tweet.id } className='container mt-5'>
+                        <div key={ tweet.id } className='container mt-4'>
                             <div className='tweet-container'>
                                 <span className='tweet-container__name'>{ tweet.name }</span>  
                                 <span className='tweet-container__tweet'>{ tweet.tweet }</span>  

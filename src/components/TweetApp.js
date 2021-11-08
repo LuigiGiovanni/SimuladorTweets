@@ -38,7 +38,7 @@ export const TweetApp = () => {
         <>
             <NavBar showForm={ showForm } changeState={ changeState } />
 
-            <FormTweet showForm={ showForm } addNewTweet={ addNewTweet } />
+            <FormTweet showForm={ showForm } changeState={ changeState } addNewTweet={ addNewTweet } />
 
             <ListTweet tweets={ tweets } handleDelete={ handleDelete } />
         </>

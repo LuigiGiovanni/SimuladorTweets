@@ -4,7 +4,7 @@ import 'moment/locale/es';
 
 import { useForm } from '../hooks/useForm';
 
-export const FormTweet = ({ addNewTweet = {}, showForm }) => {
+export const FormTweet = ({ addNewTweet = {}, showForm, changeState }) => {
 
     const [ { name, tweet }, hanldleInputChange, reset ] = useForm({
         name: '',
@@ -13,6 +13,12 @@ export const FormTweet = ({ addNewTweet = {}, showForm }) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+
+        if(tweet.length < 1 && name.length < 1){
+
+            alert('Por favor ingresa un tweet válido') 
+            return;
+        }
 
         const newTweet = {
             id: new Date().getTime(),
@@ -24,6 +30,8 @@ export const FormTweet = ({ addNewTweet = {}, showForm }) => {
         addNewTweet(newTweet);
 
         reset();
+
+        changeState();
 
     }
 
