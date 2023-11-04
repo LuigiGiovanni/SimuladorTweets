@@ -52,7 +52,7 @@ export const FormTweet = ({ addNewTweet = {}, showForm, changeState }) => {
                                 value={ name }
                                 onChange={ hanldleInputChange }
                             />
-                            <label htmlFor="floatingInputName">Ingrese su nombre</label>
+                            <label htmlFor="floatingInputName">Ingrese su nombre222</label>
                         </div>
                         <div className="form-floating mb-3">
                             <textarea 
